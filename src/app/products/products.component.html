@@ -1,0 +1,8 @@
+<div *ngFor="let product of products">
+    <h2>{{ product.title }}</h2>
+    <p>Price: ${{ product.price }}</p>
+    <p>Description: {{ product.description }}</p>
+    <p>Category: {{ product.category.toUpperCase() }}</p>
+  
+    <img *ngIf="product.rating.rate > 3" [src]="product.image" alt="{{ product.title }}">
+</div>
