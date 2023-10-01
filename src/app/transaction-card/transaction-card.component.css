@@ -1,0 +1,29 @@
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-body {
+    font-size: 14px;
+}
+
+.card.invoice {
+    background-color: #ccffcc;
+}
+
+.card.withdrawal {
+    background-color: #cccccc;
+}
+
+.highlight-yellow {
+    background-color: yellow;
+}

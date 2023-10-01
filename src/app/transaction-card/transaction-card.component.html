@@ -1,0 +1,15 @@
+<div *ngIf="transactionData" class="card"
+[ngClass]="{'invoice': transactionData.type === 'invoice',
+        'deposit': transactionData.type === 'deposit',
+        'withdrawal': transactionData.type === 'withdrawal',
+        'payment': transactionData.type === 'payment'
+    }">
+    <div class="card-title">{{ transactionData.business }}</div>
+    <div class="card-body">
+        <p>{{ transactionData.name }}</p>
+        <p><strong>Account:</strong> {{ transactionData.account }}</p>
+        <p><strong>Date:</strong> {{ transactionData.date | date }}</p>
+        <p><strong>Type:</strong> {{ transactionData.type }}</p>
+        <p [ngClass]="{'highlight-yellow': transactionData.amount > 700}"><strong>Amount:</strong> {{ transactionData.amount | currency }}</p>
+    </div>
+</div>
